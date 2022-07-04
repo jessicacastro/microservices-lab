@@ -26,7 +26,7 @@ export class ProductsService {
     });
 
     if (productWithSameSlug) {
-      throw new Error('Another product with same slug already exists');
+      throw new Error('Another product with same slug already exists.');
     }
 
     return await this.prismaService.product.create({
