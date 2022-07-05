@@ -1,13 +1,10 @@
 import { UserProvider } from "@auth0/nextjs-auth0"
-import { apolloClient } from "../libs/apollo/apollo"
-import { ApolloProvider } from '@apollo/client'
+import '../styles/global.css'
 
 function App({ Component, pageProps }) {
   return (
     <UserProvider>
-      <ApolloProvider client={apolloClient}>
-        <Component {...pageProps} />
-      </ApolloProvider>
+      <Component {...pageProps} />
     </UserProvider>
   )
 }
